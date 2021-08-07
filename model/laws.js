@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 // Define schema
 const Schema = mongoose.Schema;
 
-const Part_1Schema = new Schema({
+const LawsSchema = new Schema({
   partNum: { type: Number },
   partTitle: String,
   sectNum: { type: Number },
@@ -15,5 +15,5 @@ const Part_1Schema = new Schema({
 });
 
 // Compile model from schema
-const Part_1Model = mongoose.model("Part_1", Part_1Schema);
-module.exports = Part_1Model;
+const LawsModel = mongoose.model("Laws", LawsSchema);
+module.exports = LawsModel;
