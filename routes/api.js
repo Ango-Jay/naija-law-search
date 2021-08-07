@@ -1,11 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const Section = require("../model/section");
+const Part_1 = require("../model/part_1");
+const Part_2 = require("../model/part_2");
+const Part_3 = require("../model/part_3");
 
 // create post
 router.post("/", (req, res) => {
-  const { part, section, body, subsection } = req.body;
-  const newPost = new Section({ part, section, body, subsection });
+  const { partTitle, sectNum, sectBody } = req.body;
+  const newPost = new Part_1({
+    sectNum,
+    sectBody
+  });
   newPost.save().then((data) => {
     res.json({ data });
   });
@@ -13,7 +18,7 @@ router.post("/", (req, res) => {
 
 // find all posts
 router.get("/", (req, res) => {
-  Section.find().then((data) => {
+  Part_1.find().then((data) => {
     const allPost = {
       posts: {
         laws: [{ data }]
