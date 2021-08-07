@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const Part_1Schema = new Schema({
+  partNum: { type: Number },
   partTitle: String,
   sectNum: { type: Number },
   sectBody: [
