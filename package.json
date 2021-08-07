@@ -1,7 +1,7 @@
 {
-  "name": "cyber-api",
+  "name": "cyber",
   "version": "1.0.0",
-  "description": "Cyber law api ",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
