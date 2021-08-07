@@ -1,13 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const Part_1 = require("../model/part_1");
+const Laws = require("../model/laws");
 const Part_2 = require("../model/part_2");
 const Part_3 = require("../model/part_3");
 
 // create post
 router.post("/", (req, res) => {
-  const { partTitle, sectNum, sectBody } = req.body;
-  const newPost = new Part_1({
+  const { partNum, partTitle, sectNum, sectBody } = req.body;
+  const newPost = new Laws({
+    partNum,
+    partTitle,
     sectNum,
     sectBody
   });
@@ -18,7 +20,7 @@ router.post("/", (req, res) => {
 
 // find all posts
 router.get("/", (req, res) => {
-  Part_1.find().then((data) => {
+  Laws.find().then((data) => {
     const allPost = {
       posts: {
         laws: [{ data }]
