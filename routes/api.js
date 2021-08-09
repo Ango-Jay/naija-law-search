@@ -6,9 +6,9 @@ const Part_3 = require("../model/part_3");
 
 // create post
 router.post("/", (req, res) => {
-  const { partNum, partTitle, sectNum, sectBody } = req.body;
+  const { partNumber, partTitle, sectNum, sectBody } = req.body;
   const newPost = new Laws({
-    partNum,
+    partNumber,
     partTitle,
     sectNum,
     sectBody
@@ -21,11 +21,10 @@ router.post("/", (req, res) => {
 // find all posts
 router.get("/", (req, res) => {
   Laws.find().then((data) => {
+    const status = data ? "success" : "fail";
     const allPost = {
-      posts: {
-        laws: [{ data }]
-      },
-      status: "",
+      data,
+      status: status,
       size: ""
     };
     res.json(allPost);

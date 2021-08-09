@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const LawsSchema = new Schema({
-  partNum: { type: Number },
+  partNumber: { type: Number },
   partTitle: String,
   sectNum: { type: Number },
   sectBody: [
