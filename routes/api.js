@@ -20,6 +20,7 @@ router.post("/", (req, res) => {
 
 // find all posts
 router.get("/", (req, res) => {
+  res.setHeader("Content-Type", "application/json");
   Laws.find().then((data) => {
     const status = data ? "success" : "fail";
     const allPost = {
