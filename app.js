@@ -6,7 +6,7 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-const port = 8080 || process.env.PORT;
+const port = process.env.PORT || 8080;
 
 app.use("/api", require("./routes/api"));
 app.get("/", (req, res) => {
