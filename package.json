@@ -4,7 +4,8 @@
   "description": "API for Nigerian Cybercrime Act 2015",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
     "axios": "0.21.1",
