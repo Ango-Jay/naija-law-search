@@ -25,7 +25,7 @@ router.get("/", (req, res) => {
     const allPost = {
       data,
       status: status,
-      size: ""
+      size: data.length
     };
     res.json(allPost);
   });
