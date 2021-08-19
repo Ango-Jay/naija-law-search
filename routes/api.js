@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const Laws = require("../model/laws");
-const Part_2 = require("../model/part_2");
-const Part_3 = require("../model/part_3");
 
 // create post
 router.post("/", (req, res) => {
