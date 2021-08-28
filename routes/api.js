@@ -29,4 +29,21 @@ router.get("/", (req, res) => {
   });
 });
 
+// search by search keyterm
+router.get("/search", (req, res) => {
+  Laws.aggregate()
+    .search({
+      index: "default",
+      text: {
+        query: req.query.term,
+        path: {
+          wildcard: "*"
+        }
+      }
+    })
+    .then((data) => {
+      res.json(data);
+    });
+});
+
 module.exports = router;
