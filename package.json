@@ -1,11 +1,13 @@
 {
-  "name": "cyber",
+  "name": "naija-law-search",
   "version": "1.0.0",
-  "description": "API for Nigerian Cybercrime Act 2015",
+  "description": "web app for searching nigerian cyberCrime act 2015",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "install-client": "npm install --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
     "axios": "0.21.1",
