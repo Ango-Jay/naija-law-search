@@ -12,7 +12,7 @@ const SectionContainer: React.FC<Props> = (props) => {
   const [sectionData, setSectionData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    axios.get(`https://naijacybersearch.herokuapp.com/api/`).then((res) => {
+    axios.get(`https://naija-law-search.herokuapp.com/api/`).then(res => {
       setSectionData(res.data);
       setIsLoading(false);
     });

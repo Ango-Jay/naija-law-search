@@ -27,7 +27,7 @@ useEffect(
         }
     axios
       .get(
-        `https://naijacybersearch.herokuapp.com/api/search?term=${searchTerm}`
+        `https://naija-law-search.herokuapp.com/api/search?term=${searchTerm}`
       )
       .then(res => {
         setSearchResults(res.data);
@@ -45,7 +45,7 @@ useEffect(
 setisLoading(true)
     axios
       .get(
-        `https://naijacybersearch.herokuapp.com/api/search?term=${searchTerm}`
+        `https://naija-law-search.herokuapp.com/api/search?term=${searchTerm}`
       )
       .then(res => {
         setSearchResults(res.data);
