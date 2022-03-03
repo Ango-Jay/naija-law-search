@@ -10,9 +10,7 @@ app.use(cors());
 const port = process.env.PORT || 8080;
 
 app.use("/api", require("./routes/api"));
-app.get("/", (req, res) => {
-  res.redirect("/api/");
-});
+
 //Set up default mongoose connection
 const mongoDB = process.env.MONGODB;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
